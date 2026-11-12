@@ -1,9 +1,9 @@
-# azure\_c\_calc-app
+# lambda\_c\_calc-app
 
 ## Directory structure
 
 ```
-~/Desktop/dev/azure_c_calc-app/           # リポジトリルート
+~/Desktop/dev/lambda-c-calc-app/           # リポジトリルート
 ├── .github/
 │   └── PULL_REQUEST_TEMPLATE.md      # PRテンプレート
 ├── .gitignore                         # ビルド生成物（*.cgi, *.o）を除外
@@ -18,7 +18,7 @@
     └── calc.c                         # 計算用CGI (Sprint 2 タスク2~)
 ```
 
-| 開発リポジトリ（\~/Desktop/dev/azure\_c\_calc-app/） |      コンパイル / デプロイ     |    Apache側の配置先（システム領域）    |
+| 開発リポジトリ（\~/Desktop/dev/lambda-c-calc-app/） |      コンパイル / デプロイ     |    Apache側の配置先（システム領域）    |
 | :-----------------------------------------: | :-------------------: | :-----------------------: |
 |              public/index.html              |       そのままコピー ➔       |  /var/www/html/index.html |
 |                  src/calc.c                 | gcc でビルド (calc.cgi) ➔ | /usr/lib/cgi-bin/calc.cgi |
@@ -28,7 +28,7 @@
 ## コンパイルスクリプト
 
 ```
-cd ~/Desktop/dev/azure_c_calc-app/src
+cd ~/Desktop/dev/lambda-c-calc-app/src
 gcc calc.c -o calc.cgi
 ls -l calc.cgi
 ```
@@ -63,4 +63,4 @@ chmod +x deploy.sh
 
 * [テスト計画書](docs/test-plan.md): テスト項目と確認コマンド
 
-* [運用・デプロイ手順書](docs/operations.md): Azure VMとGitHub Actionsの運用手順
+* [運用・デプロイ手順書](docs/operations.md): AWS LambdaとGitHub Actionsの運用手順
